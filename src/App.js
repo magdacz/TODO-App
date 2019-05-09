@@ -28,6 +28,15 @@ class App extends Component {
            tasks
        })
    }
+   
+   handleClearTasks = () => {
+       const tasks = [...this.state.tasks];
+       tasks.splice(0);
+       
+       this.setState({
+           tasks
+       })
+   }
     
    render() {
        
@@ -38,7 +47,7 @@ class App extends Component {
             <h1>TODO App</h1>
             <button onClick={this.handleAddTask}>Add</button>
             <button onClick={this.handleRemoveTask}>Remove</button>
-            <button>Clear</button>
+            <button onClick={this.handleClearTasks}>Clear</button>
             <ul>{task}</ul>
            </div>
        )
