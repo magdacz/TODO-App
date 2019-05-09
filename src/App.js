@@ -19,18 +19,27 @@ class App extends Component {
            tasks
        })
    }
+   
+   handleRemoveTask = () => {
+       const tasks = [...this.state.tasks];
+       tasks.pop();
+       
+       this.setState({
+           tasks
+       })
+   }
     
    render() {
        
-       const task = this.state.tasks.map((task, index) => <li key={index}> Task number {index+1} </li>)
+       const task = this.state.tasks.map((task, index) => <li key={index}>Task number {index+1}</li>)
        
        return (
            <div>
             <h1>TODO App</h1>
             <button onClick={this.handleAddTask}>Add</button>
-            <button>Remove</button>
+            <button onClick={this.handleRemoveTask}>Remove</button>
             <button>Clear</button>
-            {this.state.tasks && <ul>{task}</ul>}
+            <ul>{task}</ul>
            </div>
        )
    } 
