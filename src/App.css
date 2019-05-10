@@ -1,33 +1,68 @@
-.App {
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300i,400,900&subset=latin-ext');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #274684;
+}
+
+.app {
+  max-width: 500px;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  border-radius: 5px;
+  background: white;
+  padding: 50px;
+  margin: auto;
+  margin-top: 50px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.header1 {
+    font-size: 45px;
+    margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.span-h1 {
+    font-size: 30px;
+    font-weight: 300;
+    font-style: italic;
+    color: #709fdc;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+    font-size: 24px;
+    color: #fff;
+    background-color: #274684;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.tasks-list {
+    margin-top: 20px;
+    color: #274684;
+}
+
+.task {
+    list-style: none;
+    font-size: 20px;
+    padding: 2px;
+}
+
+.span-number {
+    color: #d50000;
+    font-weight: 700;
 }

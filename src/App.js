@@ -40,15 +40,15 @@ class App extends Component {
     
    render() {
        
-       const task = this.state.tasks.map((task, index) => <li key={index}>Task number {index+1}</li>)
+       const task = this.state.tasks.map((task, index) => <li className='task' key={index}>Task number <span className='span-number'>{index+1}</span></li>)
        
        return (
-           <div>
-            <h1>TODO App</h1>
-            <button onClick={this.handleAddTask}>Add</button>
-            <button onClick={this.handleRemoveTask}>Remove</button>
-            <button onClick={this.handleClearTasks}>Clear</button>
-            <ul>{task}</ul>
+           <div className='app'>
+            <h1 className='header1'>TODO <span className='span-h1'>App</span></h1>
+            <button className='btn' onClick={this.handleAddTask}>Add</button>
+            <button className='btn' onClick={this.handleRemoveTask}>Remove</button>
+            <button className='btn' onClick={this.handleClearTasks}>Clear</button>
+            <ul className='tasks-list'>{task}</ul>
            </div>
        )
    } 
